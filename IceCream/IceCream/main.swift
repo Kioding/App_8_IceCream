@@ -7,11 +7,17 @@
 
 import Foundation
 
-for index in 1...11 {
-    print("***********")
+func drawPartOfIceCream() {
+    for index in 1...11 {
+        print("***********")
+    }
 }
 
-for index in 1...4 {
-    print("    | |")
+func drawPartOfIceCreamBar() {
+    for index in 1...4 {
+        print("    | |")
+    }
 }
 
+drawPartOfIceCream()
+drawPartOfIceCreamBar()
