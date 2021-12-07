@@ -21,19 +21,23 @@ class IceCream {
     }
     
     func drawPartOfIceCream() {
-        for _ in 1...lengthOfIceCream {
-            print(" \(IceCreamBody)")
+        for index in 0..<lengthOfIceCream {
+            if index % 2 == 0 {
+                print("\(topping)\(IceCreamBody)")
+            } else {
+                print(" \(IceCreamBody)\(topping)")
+            }
         }
     }
     
     func drawPartOfIceCreamBar() {
-        for _ in 1...lengthOfIceCreamBar {
+        for _ in 0..<lengthOfIceCreamBar {
             print(" | |")
         }
     }
 }
 
-let OrderedIceCream = IceCream(lengthOfIceCream: 10, IceCreamBody: "***", topping: " ", lengthOfIceCreamBar: 4)
+let OrderedIceCream = IceCream(lengthOfIceCream: 10, IceCreamBody: "|0|", topping: " ", lengthOfIceCreamBar: 4)
 
 OrderedIceCream.drawPartOfIceCream()
 OrderedIceCream.drawPartOfIceCreamBar()
