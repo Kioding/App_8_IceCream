@@ -9,13 +9,13 @@ import Foundation
 
 class IceCream {
     var lengthOfIceCream: Int
-    var IceCreamBody: String
+    var iceCreamBody: String
     var topping: String
     var lengthOfIceCreamBar: Int
     
     init(lengthOfIceCream:Int, IceCreamBody: String, topping: String = " ", lengthOfIceCreamBar: Int) {
         self.lengthOfIceCream = lengthOfIceCream
-        self.IceCreamBody = IceCreamBody
+        self.iceCreamBody = IceCreamBody
         self.topping = topping
         self.lengthOfIceCreamBar = lengthOfIceCreamBar
     }
@@ -23,27 +23,29 @@ class IceCream {
     func drawPartOfIceCream() {
         for index in 0..<lengthOfIceCream {
             if index % 2 == 0 {
-                print("\(topping)\(IceCreamBody)")
+                print("\(self.topping+self.iceCreamBody)")
             } else {
-                print(" \(IceCreamBody)\(topping)")
+                print(" \(self.iceCreamBody+self.topping)")
             }
         }
     }
     
     func drawPartOfIceCreamBar() {
-        let spacing: Int = self.IceCreamBody.count / 2
+        let spacing: Int = self.iceCreamBody.count / 2
         var spacingLength: String = ""
+        let shapeOfIceCreamBar: String = "| |"
         
         for _ in 0..<spacing {
             spacingLength += " "
         }
         
-        for _ in 0..<lengthOfIceCreamBar {
-            print("\(spacingLength)| |")
+        for _ in 0..<self.lengthOfIceCreamBar {
+            print("\(spacingLength+shapeOfIceCreamBar)")
         }
     }
 }
 
+// iceCream Sample
 let OrderedIceCream = IceCream(lengthOfIceCream: 10, IceCreamBody: "|#$%&&%$#|", topping: "*", lengthOfIceCreamBar: 4)
 
 OrderedIceCream.drawPartOfIceCream()
