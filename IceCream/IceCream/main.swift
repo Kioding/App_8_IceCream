@@ -21,14 +21,14 @@ class IceCream {
     }
     
     func drawPartOfIceCream() {
-        for index in 1...11 {
-            print("***********")
+        for _ in 1...lengthOfIceCream {
+            print(" \(IceCreamBody)")
         }
     }
     
     func drawPartOfIceCreamBar() {
-        for index in 1...4 {
-            print("    | |")
+        for _ in 1...lengthOfIceCreamBar {
+            print(" | |")
         }
     }
 }
