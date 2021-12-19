@@ -46,9 +46,9 @@ class IceCream {
         
         for index in 0..<lengthOfIceCream {
             if index % 2 == 0 {
-                print("\(self.topping+self.iceCreamBody)")
+                print("\(self.topping+oddIceCreamBody)")
             } else {
-                print(" \(oddIceCreamBody+self.topping)")
+                print(" \(self.iceCreamBody+self.topping)")
             }
         }
     }
