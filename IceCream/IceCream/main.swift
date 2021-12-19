@@ -20,6 +20,17 @@ class IceCream {
         self.lengthOfIceCreamBar = lengthOfIceCreamBar
     }
     
+    func showInformationOfIceCream() {
+        print("""
+              <정보>
+              길이: \(lengthOfIceCream)
+              몸통: \(iceCreamBody)
+              토핑: \(topping)
+              막대길이: \(lengthOfIceCreamBar)
+              
+              """)
+    }
+    
     func drawPartOfIceCream() {
         for index in 0..<lengthOfIceCream {
             if index % 2 == 0 {
@@ -48,5 +59,6 @@ class IceCream {
 // iceCream Sample
 let OrderedIceCream = IceCream(lengthOfIceCream: 10, IceCreamBody: "|#$%&&%$#|", topping: "*", lengthOfIceCreamBar: 4)
 
+OrderedIceCream.showInformationOfIceCream()
 OrderedIceCream.drawPartOfIceCream()
 OrderedIceCream.drawPartOfIceCreamBar()
