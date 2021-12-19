@@ -28,6 +28,7 @@ class IceCream {
     
     func showInformationOfIceCream() {
         print("""
+
               <정보>
               길이: \(lengthOfIceCream)
               몸통: \(iceCreamBody)
@@ -38,11 +39,16 @@ class IceCream {
     }
     
     func drawPartOfIceCream() {
+        var oddIceCreamBody = self.iceCreamBody
+        if iceCreamBody == "|0|" {
+            oddIceCreamBody = "| |"
+        }
+        
         for index in 0..<lengthOfIceCream {
             if index % 2 == 0 {
                 print("\(self.topping+self.iceCreamBody)")
             } else {
-                print(" \(self.iceCreamBody+self.topping)")
+                print(" \(oddIceCreamBody+self.topping)")
             }
         }
     }
