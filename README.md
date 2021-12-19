@@ -1,5 +1,10 @@
-# 구현사항
 
+# 아이스크림 프로젝트
+> 주문을 받아 아이스크림을 만드는 프로젝트이며, 콘솔로만 진행하였습니다.
+
+<br>
+
+# 구현사항
 ### 아이스크림 구현 예시
 ```swift 
 let fristIceCream = IceCream(lengthOfIceCream: 6, IceCreamBody: "|#$%&&%$#|", topping: "*", lengthOfIceCreamBar: 3)
