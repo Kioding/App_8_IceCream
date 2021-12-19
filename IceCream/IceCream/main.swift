@@ -20,6 +20,12 @@ class IceCream {
         self.lengthOfIceCreamBar = lengthOfIceCreamBar
     }
     
+    func makeIceCream() {
+        showInformationOfIceCream()
+        drawPartOfIceCream()
+        drawPartOfIceCreamBar()
+    }
+    
     func showInformationOfIceCream() {
         print("""
               <정보>
@@ -59,6 +65,4 @@ class IceCream {
 // iceCream Sample
 let OrderedIceCream = IceCream(lengthOfIceCream: 10, IceCreamBody: "|#$%&&%$#|", topping: "*", lengthOfIceCreamBar: 4)
 
-OrderedIceCream.showInformationOfIceCream()
-OrderedIceCream.drawPartOfIceCream()
-OrderedIceCream.drawPartOfIceCreamBar()
+OrderedIceCream.makeIceCream()
